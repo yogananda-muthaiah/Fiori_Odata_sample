@@ -1,0 +1,92 @@
+<mvc:View
+    controllerName="com.accenture.orderlist.app004.controller.Orders"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+    <Page
+        id="page"
+        title="Order List"
+        class="sapUiResponsiveContent sapUiTheme sapUiSizeCompact"
+    >
+        <headerContent>
+            <OverflowToolbar id="fbar1">
+                <ToolbarSpacer id="toba" />
+                <SearchField
+                    id="se1"
+                    width="50%"
+                    class="rightAlignSearchField"
+                    placeholder="Search"
+                    search="onSearchOrders"
+                />
+                <Button
+                    id="b1"
+                    icon="sap-icon://detail-view"
+                    press=".onOpenVieweDialog"
+                />
+                <Button
+                    id="b2"
+                    icon="sap-icon://add"
+                    press="onCreateOrder"
+                />
+                <Button
+                    id="b3"
+                    icon="sap-icon://edit"
+                    press="onOpenUpdateDialog"
+                />
+                <Button
+                    id="b4"
+                    icon="sap-icon://delete"
+                    press="onDeleteOrder"
+                />
+            </OverflowToolbar>
+        </headerContent>
+        <VBox
+            id="vb1"
+            class="sapUiSmallMargin"
+        >
+            <Table
+                id="orderTable"
+                inset="false"
+                items="{orders>/Orders}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelectionChange"
+                growing="true"
+                growingThreshold="40"
+            >
+                <columns>
+                    <Column id="c1">
+                        <header>
+                            <Text id="t1" text="Order ID" />
+                        </header>
+                    </Column>
+                    <Column id="c2">
+                        <header>
+                            <Text id="t2" text="Employee ID" />
+                        </header>
+                    </Column>
+                    <Column id="c3">
+                        <header>
+                            <Text id="t3" text="Customer ID" />
+                        </header>
+                    </Column>
+                    <Column id="c4">
+                        <header>
+                            <Text id="t4" text="Ship Country" />
+                        </header>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="cl1">
+                        <cells>
+                            <ObjectIdentifier id="obj1" title="{orders>OrderID}" />
+                            <Text id="tx15" text="{orders>EmployeeID}" />
+                            <Text id="tx16" text="{orders>CustomerID}" />
+                            <Text id="tx17" text="{orders>ShipCountry}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
+    </Page>
+</mvc:View>

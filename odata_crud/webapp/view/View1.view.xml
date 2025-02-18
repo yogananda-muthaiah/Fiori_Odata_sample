@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="odatacrud.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <Table id="idProducts" items="{/Products}">
+            <columns>
+                <Column id="colunm1">
+                    <Text id="Text1" text="ID" />
+                </Column>
+                <Column id="colunm2">
+                    <Text id="Text2" text="Name" />
+                </Column>
+                <Column id="colunm3">
+                    <Text id="Text3" text="Price" />
+                </Column>
+                <Column id="colunm4">
+                    <Text id="Text4" text="Rating" />
+                </Column>
+                <Column id="colunm5">
+                    <Text id="Text5" text="" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="item1">
+                    <cells>
+                        <Text id="itemText1" text="{ID}" />
+                        <Text id="itemText2" text="{Name}" />
+                        <Text id="itemText3" text="{Price}" />
+                        <Input id="itemText4" value="{Rating}" editable="false" />
+                        <HBox id="HBox1" >
+                        <Button id="Button1" icon="sap-icon://edit" text="Edit" press="onEdit"></Button>
+                        <Button id="Button2" class="sapUiSmallMarginBeginEnd" icon="sap-icon://delete" text="Delete" press="onDelete"></Button>
+                        <Button id="Button3" icon="sap-icon://copy" text="Duplicate" press="onDuplicate"></Button>
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

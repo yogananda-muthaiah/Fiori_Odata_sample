@@ -1,0 +1,98 @@
+<mvc:View
+    controllerName="com.accenture.orders.app003.controller.orderDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="_IDGenPage1"
+        title="Order Details"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <f:SimpleForm id="_IDGenSimpleForm1"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="4"
+                labelSpanM="4"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="2"
+                singleContainerFullSize="false" >
+                <f:content>
+                    <core:Title id="_IDGenTitle1" text="Order Information" />
+                    <Label id="_IDGenLabel1" text="Order ID" />
+                    <Text id="_IDGenText1" text="{OrderID}" />
+                    <Label id="_IDGenLabel2" text="Customer ID" />
+                    <Text id="_IDGenText2" text="{CustomerID}" />
+                    <Label id="_IDGenLabel3" text="Employee ID" />
+                    <Text id="_IDGenText3" text="{EmployeeID}" />
+                    <Label id="_IDGenLabel4" text="Order Date" />
+                    <Text id="_IDGenText4" text="{
+                        path: 'OrderDate',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                            style: 'medium',
+                            source: {
+                                pattern: 'yyyy-MM-ddTHH:mm:ss'
+                            }
+                        }
+                    }" />
+                    <Label id="_IDGenLabel5" text="Required Date" />
+                    <Text id="_IDGenText5" text="{
+                        path: 'RequiredDate',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                            style: 'medium',
+                            source: {
+                                pattern: 'yyyy-MM-ddTHH:mm:ss'
+                            }
+                        }
+                    }" />
+                    <Label id="_IDGenLabel6" text="Shipped Date" />
+                    <Text id="_IDGenText6" text="{
+                        path: 'ShippedDate',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                            style: 'medium',
+                            source: {
+                                pattern: 'yyyy-MM-ddTHH:mm:ss'
+                            }
+                        }
+                    }" />
+                    <Label id="_IDGenLabel7" text="Freight" />
+                    <Text id="_IDGenText7" text="{
+                        path: 'Freight',
+                        type: 'sap.ui.model.type.Float',
+                        formatOptions: {
+                            minFractionDigits: 2,
+                            maxFractionDigits: 2
+                        }
+                    }" />
+                    <Label id="_IDGenLabel8" text="Ship Via" />
+                    <Text id="_IDGenText8" text="{ShipVia}" />
+
+                    <core:Title id="_IDGenTitle2" text="Shipping Information" />
+                    <Label id="_IDGenLabel9" text="Ship Name" />
+                    <Text id="_IDGenText9" text="{ShipName}" />
+                    <Label id="_IDGenLabel10" text="Ship Address" />
+                    <Text id="_IDGenText10" text="{ShipAddress}" />
+                    <Label id="_IDGenLabel11" text="Ship City" />
+                    <Text id="_IDGenText11" text="{ShipCity}" />
+                    <Label id="_IDGenLabel12" text="Ship Region" />
+                    <Text id="_IDGenText12" text="{ShipRegion}" />
+                    <Label id="_IDGenLabel13" text="Ship Postal Code" />
+                    <Text id="_IDGenText13" text="{ShipPostalCode}" />
+                    <Label id="_IDGenLabel14" text="Ship Country" />
+                    <Text id="_IDGenText14" text="{ShipCountry}" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

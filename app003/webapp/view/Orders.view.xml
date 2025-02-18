@@ -1,0 +1,124 @@
+<mvc:View
+    controllerName="com.accenture.orders.app003.controller.Orders"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Panel id="panelFilters" headerText="{i18n>filterSelection}">
+                <Label
+                    id="labelShipCountry"
+                    labelFor="shipCountry"
+                    text="{i18n>ShipCountry}"
+                    class="sapUIsmallMargin"
+                />
+                <ComboBox
+                    id="ShipCountry"
+                    selectedKey="{selectionScreen>/ShipCountry}"
+                    width="200px"
+                    class="sapUISmallMarginEnd"
+                    items="{
+                        path: 'selectionScreen>/Countries',
+                        templateShareable: false
+                    }"
+                >
+                    <core:Item id="_IDGenItem1" key="{selectionScreen>Country}" text="{selectionScreen>Country}" />
+                </ComboBox>
+                <Label
+                    id="labelOrderID"
+                    labelFor="OrderID"
+                    text="{i18n>OrderID}"
+                    class="sapUIsmallMargin"
+                />
+                <Input
+                    id="OrderID"
+                    value="{selectionScreen>/OrderID}"
+                    width="200Px"
+                    class="sapUISmallMarginEnd"
+                />
+                <Button
+                    id="btnFilters"
+                    text="{i18n>btnFilter}"
+                    icon="sap-icon://filter"
+                    press="onFilter"
+                    class="sapUISmallMarginEnd"
+                />
+                <Button
+                    id="btnClearFilters"
+                    text="{i18n>btnClearFilter}"
+                    icon="sap-icon://clear-filter"
+                    press="onClearFilter"
+                    class="sapUISmallMarginEnd"
+                />
+                <Button
+                id="btnAddNewOrder"
+                text="{i18n>btnAddNewOrder}"
+                icon="sap-icon://add"
+                press="onAddNewOrder"
+                class="sapUIResponsiveMargin"
+            />
+            </Panel>
+            <Panel
+                id="ordersList"
+                headerText="{i18n>ordersHeaderList}"
+                class="sapUIResponsiveMargin"
+                width="auto"
+            >
+                <Table
+                    id="tableOrders"
+                    inset="false"
+                    items="{/Orders}"
+                >
+                    <columns>
+                        <Column id="_IDGenColumn1">
+                            <Text id="_IDGenText1" text="{i18n>OrderID}" />
+                        </Column>
+                        <Column id="_IDGenColumn2">
+                            <Text id="_IDGenText2" text="{i18n>EmployeeID}" />
+                        </Column>
+                        <Column id="_IDGenColumn3">
+                            <Text id="_IDGenText3" text="{i18n>CustomerID}" />
+                        </Column>
+                        <Column id="_IDGenColumn4">
+                            <Text id="_IDGenText4" text="{i18n>ShipCountry}" />
+                        </Column>
+                        <Column id="_IDGenColumn5">
+                            <Text id="_IDGenText5" text="{i18n>Modify}" />
+                        </Column>
+                        <Column id="_IDGenColumn6">
+                            <Text id="_IDGenText6" text="{i18n>Delete}" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="_IDGenColumnListItem1">
+                            <cells>
+                                <Link id="_IDGenLink1" text="{OrderID}" press=".onOrderIDPress" />
+                                <Text id="_IDGenText8" text="{EmployeeID}" />
+                                <Text id="_IDGenText9" text="{CustomerID}" />
+                                <Text id="_IDGenText10" text="{ShipCountry}" />
+                                <Button
+                                    id="btnModify"
+                                    text="{i18n>btnModify}"
+                                    icon="sap-icon://edit"
+                                    press="onModify"
+                                    class="sapUISmallMarginEnd"
+                                />
+                                <Button
+                                    id="btnDelete"
+                                    text="{i18n>btnDelete}"
+                                    icon="sap-icon://delete"
+                                    press="onDelete"
+                                    class="sapUISmallMarginEnd"
+                                />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

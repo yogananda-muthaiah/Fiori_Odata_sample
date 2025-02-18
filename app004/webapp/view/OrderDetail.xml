@@ -1,0 +1,69 @@
+<mvc:View controllerName="com.accenture.orderlist.app004.controller.OrderDetail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+     xmlns:sf="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="Order Detail" class="sapUiResponsiveContent sapUiTheme sapUiSizeCompact">                  
+                       
+    <VBox class="sapUiSmallMargin" id="vBox1">
+    <sf:SimpleForm id="simpleform" 
+        editable="false"
+        layout="ResponsiveGridLayout"
+        title="Product Detail"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        adjustLabelSpan="false"
+        emptySpanXL="4"
+        emptySpanM="4"
+        emptySpanL="4"
+        emptySpanS="0"
+        columnsXL="1"
+        columnsL="1"
+        columnsM="1"
+        singleContainerFullSize="false" >
+        <sf:content>
+            <Label id="lab1" text="Order ID" />
+            <Text id="text9" text="{Orders>OrderID}" />
+
+            <Label id="lab2" text="Employee ID" />
+            <Text id="text8" text="{Orders>EmployeeID}" />
+
+            <Label id="lab3" text="Customer ID" />
+            <Text id="text7" text="{Orders>CustomerID}" />
+
+             <Label id="lab4" text="Ship Country" />
+            <Text id="text6" text="{Orders>ShipCountry}" />
+
+             <Label id="lab5" text="Freight" />
+            <Text id="text5" text="{Orders>Freight}" />
+
+             <Label id="lab6" text="Order Date" />
+            <Text id="text4" text="{Orders>OrderDate}" />
+
+            <Label id="lab7" text="Ship Address" />
+            <Text id="text2" text="{Orders>ShipAdsress}" />
+
+             <Label id="lab8" text="Ship City" />
+            <Text id="text3" text="{Orders>ShipCity}" />
+
+             <Label id="lab9" text="Ship Name" />
+            <Text id="text1" text="{Orders>ShipName}" />
+
+             <Label id="lab9" text="Ship Postal Code" />
+            <Text id="text1" text="{Orders>ShipPostalCode}" />
+
+             <Label id="lab9" text="Ship Region" />
+            <Text id="text1" text="{Orders>ShipRegion}" />
+
+             <Label id="lab9" text="Ship Via" />
+            <Text id="text1" text="{Orders>ShipVia}" />
+
+             <Label id="lab9" text="Ship Date" />
+            <Text id="text1" text="{Orders>ShipDate}" />
+
+        </sf:content>
+    </sf:SimpleForm>    
+    </VBox>
+    </Page>
+</mvc:View>

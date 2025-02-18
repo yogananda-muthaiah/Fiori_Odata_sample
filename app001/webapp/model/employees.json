@@ -1,0 +1,75 @@
+{
+    "employees": [
+      {
+        "ID": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "telefono": "600 123 456",
+        "ciudad": "Madrid"
+      },
+      {
+        "ID": 2,
+        "nombre": "María",
+        "apellido": "Gómez",
+        "telefono": "600 234 567",
+        "ciudad": "Barcelona"
+      },
+      {
+        "ID": 3,
+        "nombre": "Carlos",
+        "apellido": "Sánchez",
+        "telefono": "600 345 678",
+        "ciudad": "Madrid"
+      },
+      {
+        "ID": 4,
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "telefono": "600 456 789",
+        "ciudad": "Valencia"
+      },
+      {
+        "ID": 5,
+        "nombre": "Luis",
+        "apellido": "Fernández",
+        "telefono": "600 567 890",
+        "ciudad": "Sevilla"
+      },
+      {
+        "ID": 6,
+        "nombre": "Elena",
+        "apellido": "Rodríguez",
+        "telefono": "600 678 901",
+        "ciudad": "Zaragoza"
+      },
+      {
+        "ID": 7,
+        "nombre": "Jorge",
+        "apellido": "López",
+        "telefono": "600 789 012",
+        "ciudad": "Madrid"
+      },
+      {
+        "ID": 8,
+        "nombre": "Lucía",
+        "apellido": "Hernández",
+        "telefono": "600 890 123",
+        "ciudad": "Málaga"
+      },
+      {
+        "ID": 9,
+        "nombre": "Manuel",
+        "apellido": "Ruiz",
+        "telefono": "600 901 234",
+        "ciudad": "Málaga"
+      },
+      {
+        "ID": 10,
+        "nombre": "Laura",
+        "apellido": "Ramírez",
+        "telefono": "600 012 345",
+        "ciudad": "Barcelona"
+      }
+    ]
+  }
+  
